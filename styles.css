@@ -27,11 +27,12 @@ body {
     margin-right: 10px;
 }
 }
-.post-image
-width: 500px;
+.post-image {
+  width: 500px;
   height: 500px;
   border-radius: 0px;
   margin-right: 10px;
+}
 }
 .tweet-content {
     overflow: hidden;
