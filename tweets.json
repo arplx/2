@@ -1,92 +1,40 @@
 [
     {
-        "username": "user1",
-        "profileImage": "user1.jpg",
-        "text": "Just had the best meal ever! #Foodie",
-        "location": "City A, Country X",
+        "username": "JohnDoe",
+        "handle": "@JohnDoe",
+        "avatar": "avatar.jpg",
+        "tweetText": "Just discovered a hidden gem of a cafe in the heart of the city. ☕️ Highly recommend!",
+        "timestamp": "2024-01-12T15:30:00Z",
+        "retweets": 15,
         "likes": 42,
-        "comments": 8,
-        "datePosted": "2024-01-12T12:45:00Z"
+        "comments": [
+            {
+                "username": "JaneSmith",
+                "commentText": "Sounds amazing! I'll have to check it out.",
+                "timestamp": "2024-01-12T15:45:00Z"
+            },
+            {
+                "username": "BobJohnson",
+                "commentText": "Great find! I love cozy cafes. 😊",
+                "timestamp": "2024-01-12T16:00:00Z"
+            }
+        ],
+        "style": {
+            "tweet": {
+                "backgroundColor": "#ffffff",
+                "border": "1px solid #ccc",
+                "borderRadius": "10px",
+                "padding": "15px",
+                "boxShadow": "0 0 10px rgba(0, 0, 0, 0.1)"
+            },
+            "avatar": {
+                "width": "48px",
+                "height": "48px",
+                "borderRadius": "50%",
+                "marginRight": "10px"
+            },
+            // Include styles for other elements as needed
+        }
     },
-    {
-        "username": "user2",
-        "profileImage": "user2.jpg",
-        "text": "Exploring a new hiking trail today. 🏞️ #NatureLover",
-        "location": "City B, Country Y",
-        "likes": 65,
-        "comments": 12,
-        "datePosted": "2024-01-12T10:15:00Z"
-    },
-    {
-        "username": "user3",
-        "profileImage": "user3.jpg",
-        "text": "Coding marathon this weekend! 💻 #DeveloperLife",
-        "location": "City C, Country Z",
-        "likes": 30,
-        "comments": 5,
-        "datePosted": "2024-01-11T20:00:00Z"
-    },
-    {
-        "username": "user4",
-        "profileImage": "user4.jpg",
-        "text": "Movie night with friends. 🍿🎬 #MovieBuff",
-        "location": "City D, Country W",
-        "likes": 50,
-        "comments": 10,
-        "datePosted": "2024-01-11T18:30:00Z"
-    },
-    {
-        "username": "user5",
-        "profileImage": "user5.jpg",
-        "text": "Visited an art gallery today. 🎨 #ArtLover",
-        "location": "City E, Country V",
-        "likes": 38,
-        "comments": 7,
-        "datePosted": "2024-01-10T15:20:00Z"
-    },
-    {
-        "username": "user6",
-        "profileImage": "user6.jpg",
-        "text": "Sunny day at the beach! 🏖️☀️ #BeachLife",
-        "location": "City F, Country U",
-        "likes": 55,
-        "comments": 9,
-        "datePosted": "2024-01-10T12:00:00Z"
-    },
-    {
-        "username": "user7",
-        "profileImage": "user7.jpg",
-        "text": "Trying out a new recipe. 🍲 #CookingAdventures",
-        "location": "City G, Country T",
-        "likes": 48,
-        "comments": 11,
-        "datePosted": "2024-01-09T19:45:00Z"
-    },
-    {
-        "username": "user8",
-        "profileImage": "user8.jpg",
-        "text": "Late-night coding session. 💻🌙 #NightOwl",
-        "location": "City H, Country S",
-        "likes": 33,
-        "comments": 6,
-        "datePosted": "2024-01-09T02:30:00Z"
-    },
-    {
-        "username": "user9",
-        "profileImage": "user9.jpg",
-        "text": "Book recommendation: 'The Silent Stars Go By' 📚 #BookRecommendation",
-        "location": "City I, Country R",
-        "likes": 40,
-        "comments": 8,
-        "datePosted": "2024-01-08T16:10:00Z"
-    },
-    {
-        "username": "user10",
-        "profileImage": "user10.jpg",
-        "text": "Weekend getaway to the mountains! ⛰️ #MountainEscape",
-        "location": "City J, Country Q",
-        "likes": 60,
-        "comments": 13,
-        "datePosted": "2024-01-08T09:00:00Z"
-    }
+    // Add more posts if needed
 ]
