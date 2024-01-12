@@ -1,42 +1,23 @@
 [
-    {
-        "username": "JohnDoe",
-        "handle": "@JohnDoe",
-        "avatar": "avatar1.jpg",
-        "tweetText": "Just discovered a hidden gem of a cafe in the heart of the city. ☕️ Highly recommend!",
-        "timestamp": "2024-01-12T15:30:00Z",
-        "retweets": 15,
-        "likes": 42,
-        "comments": [
-            {
-                "username": "JaneSmith",
-                "commentText": "Sounds amazing! I'll have to check it out.",
-                "timestamp": "2024-01-12T15:45:00Z"
-            },
-            {
-                "username": "BobJohnson",
-                "commentText": "Great find! I love cozy cafes. 😊",
-                "timestamp": "2024-01-12T16:00:00Z"
-            }
-        ],
-        "postImage": "https://s.yimg.com/ny/api/res/1.2/i0HJHDx6iuOqk2ThNIMzmw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTc5Ng--/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/4ce65de60c3946cf2597aa965717a898"
+  {
+    "user": {
+      "name": "John Doe",
+      "profilePicture": "profile1.jpg"
     },
-    {
-        "username": "AliceSmith",
-        "handle": "@AliceSmith",
-        "avatar": "avatar2.jpg",
-        "tweetText": "Beautiful sunset at the beach. 🌅 #Nature",
-        "timestamp": "2024-01-12T12:45:00Z",
-        "retweets": 20,
-        "likes": 60,
-        "comments": [
-            {
-                "username": "CharlieBrown",
-                "commentText": "Wish I were there! Stunning view!",
-                "timestamp": "2024-01-12T13:00:00Z"
-            }
-        ],
-        "postImage": "https://s.yimg.com/ny/api/res/1.2/i0HJHDx6iuOqk2ThNIMzmw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTc5Ng--/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/4ce65de60c3946cf2597aa965717a898"
+    "location": "New York, NY",
+    "postImage": "image1.jpg",
+    "likes": 20,
+    "comments": 10
+  },
+  {
+    "user": {
+      "name": "Jane Smith",
+      "profilePicture": "profile2.jpg"
     },
-    // Repeat the pattern for other posts with or without images
+    "location": "Los Angeles, CA",
+    "postImage": "image2.jpg",
+    "likes": 15,
+    "comments": 8
+  }
+  // Add more tweets as needed
 ]
