@@ -10,16 +10,31 @@ fetch('tweets.json')
             const tweetElement = document.createElement('div');
             tweetElement.classList.add('tweet');
             tweetElement.innerHTML = `
-                <img src="${tweet.profileImage}" alt="Profile Image">
-                <div class="tweet-content">
-                    <h3>${tweet.username}</h3>
-                    <p>${tweet.text}</p>
-                    <div class="tweet-details">
-                        <p><strong>Location:</strong> ${tweet.location || 'Not specified'}</p>
-                        <p><strong>Likes:</strong> ${tweet.likes || 0}</p>
-                        <p><strong>Comments:</strong> ${tweet.comments || 0}</p>
-                        <p><strong>Date Posted:</strong> ${tweet.datePosted || 'Not available'}</p>
+                <div class="tweet-header">
+                    <img src="${tweet.avatar}" alt="Profile Image">
+                    <div class="tweet-user-details">
+                        <h3>${tweet.username}</h3>
+                        <span>${tweet.handle}</span>
                     </div>
+                </div>
+                <p class="tweet-text">${tweet.tweetText}</p>
+                ${tweet.postImage ? `<img class="post-image" src="${tweet.postImage}" alt="Post Image">` : ''}
+                <div class="tweet-details">
+                    <p>${new Date(tweet.timestamp).toLocaleString()}</p>
+                    <p>Retweets: ${tweet.retweets}</p>
+                    <p>Likes: ${tweet.likes}</p>
+                </div>
+                <div class="comments-container">
+                    <h4>Comments:</h4>
+                    <ul class="comments-list">
+                        ${tweet.comments.map(comment => `
+                            <li>
+                                <strong>${comment.username}</strong>
+                                <p>${comment.commentText}</p>
+                                <p>${new Date(comment.timestamp).toLocaleString()}</p>
+                            </li>
+                        `).join('')}
+                    </ul>
                 </div>
             `;
             tweetsContainer.appendChild(tweetElement);
