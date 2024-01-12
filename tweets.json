@@ -2,20 +2,20 @@
   {
     "user": {
       "name": "John Doe",
-      "profilePicture": "profile1.jpg"
+      "profilePicture": "https://pbs.twimg.com/profile_images/477146735005822976/h6_2vWWF_400x400.jpeg"
     },
     "location": "New York, NY",
-    "postImage": "image1.jpg",
+    "postImage": "https://pbs.twimg.com/profile_images/477146735005822976/h6_2vWWF_400x400.jpeg",
     "likes": 20,
     "comments": 10
   },
   {
     "user": {
       "name": "Jane Smith",
-      "profilePicture": "profile2.jpg"
+      "profilePicture": "https://pbs.twimg.com/profile_images/477146735005822976/h6_2vWWF_400x400.jpeg"
     },
     "location": "Los Angeles, CA",
-    "postImage": "image2.jpg",
+    "postImage": "https://pbs.twimg.com/profile_images/477146735005822976/h6_2vWWF_400x400.jpeg",
     "likes": 15,
     "comments": 8
   }
