@@ -1,0 +1,38 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#tweets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tweet {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tweet img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tweet-content h3 {
+    margin: 0;
+    color: #333;
+}
+
+.tweet-content p {
+    margin: 5px 0;
+    color: #555;
+}
