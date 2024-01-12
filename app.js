@@ -1,43 +1,56 @@
-// Assuming you have a 'tweets.json' file in the same directory
-const tweetsContainer = document.getElementById('tweets-container');
+document.addEventListener('DOMContentLoaded', function () {
+    // Fetch tweets from the JSON file
+    fetch('tweets.json')
+        .then(response => response.json())
+        .then(data => {
+            // Display tweets
+            const tweetsContainer = document.getElementById('tweets-container');
+            data.forEach(tweet => {
+                const tweetElement = createTweetElement(tweet);
+                tweetsContainer.appendChild(tweetElement);
+            });
+        })
+        .catch(error => console.error('Error fetching tweets:', error));
+});
 
-// Fetch tweets from 'tweets.json'
-fetch('tweets.json')
-    .then(response => response.json())
-    .then(tweets => {
-        // Display tweets dynamically
-        tweets.forEach(tweet => {
-            const tweetElement = document.createElement('div');
-            tweetElement.classList.add('tweet');
-            tweetElement.innerHTML = `
-                <div class="tweet-header">
-                    <img src="${tweet.avatar}" alt="Profile Image">
-                    <div class="tweet-user-details">
-                        <h3>${tweet.username}</h3>
-                        <span>${tweet.handle}</span>
-                    </div>
-                </div>
-                <p class="tweet-text">${tweet.tweetText}</p>
-                ${tweet.postImage ? `<img class="post-image" src="${tweet.postImage}" alt="Post Image">` : ''}
-                <div class="tweet-details">
-                    <p>${new Date(tweet.timestamp).toLocaleString()}</p>
-                    <p>Retweets: ${tweet.retweets}</p>
-                    <p>Likes: ${tweet.likes}</p>
-                </div>
-                <div class="comments-container">
-                    <h4>Comments:</h4>
-                    <ul class="comments-list">
-                        ${tweet.comments.map(comment => `
-                            <li>
-                                <strong>${comment.username}</strong>
-                                <p>${comment.commentText}</p>
-                                <p>${new Date(comment.timestamp).toLocaleString()}</p>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </div>
-            `;
-            tweetsContainer.appendChild(tweetElement);
-        });
-    })
-    .catch(error => console.error('Error fetching tweets:', error));
+function createTweetElement(tweet) {
+    const tweetElement = document.createElement('div');
+    tweetElement.classList.add('tweet');
+
+    // User section
+    const userSection = document.createElement('div');
+    userSection.classList.add('user-section');
+
+    const profilePicture = document.createElement('img');
+    profilePicture.src = tweet.user.profilePicture;
+    profilePicture.alt = 'Profile Picture';
+    userSection.appendChild(profilePicture);
+
+    const userName = document.createElement('span');
+    userName.textContent = tweet.user.name;
+    userSection.appendChild(userName);
+
+    tweetElement.appendChild(userSection);
+
+    // Location
+    const location = document.createElement('p');
+    location.textContent = `Location: ${tweet.location}`;
+    tweetElement.appendChild(location);
+
+    // Post image
+    const postImage = document.createElement('img');
+    postImage.src = tweet.postImage;
+    postImage.alt = 'Post Image';
+    tweetElement.appendChild(postImage);
+
+    // Likes and comments
+    const likes = document.createElement('span');
+    likes.innerHTML = `<svg> <!-- Your SVG for likes icon --> </svg> ${tweet.likes} Likes`;
+    tweetElement.appendChild(likes);
+
+    const comments = document.createElement('span');
+    comments.innerHTML = `<svg> <!-- Your SVG for comments icon --> </svg> ${tweet.comments} Comments`;
+    tweetElement.appendChild(comments);
+
+    return tweetElement;
+}
