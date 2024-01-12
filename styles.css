@@ -17,6 +17,7 @@ body {
     padding: 15px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
 .tweet img {
@@ -42,6 +43,8 @@ body {
 
 .tweet-details {
     margin-top: 10px;
+    dispplay: flex;
+    gap: 10px;
 }
 
 .tweet-details p {
